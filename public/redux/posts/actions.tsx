@@ -8,12 +8,12 @@ return{
 export const GetPostsSuccess=(posts:Array<any>)=>{
     return{
         type:GET_POSTS_SUCCESS,
-        payload:posts
+        payload:{posts:posts}
     }
 }
 export const GetPostsFail=(er:string)=>{
     return{
         type:GET_POSTS_FAIL,
-        payload:er
+        payload:{er:er}
     }
 }

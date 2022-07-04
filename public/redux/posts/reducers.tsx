@@ -1,23 +1,26 @@
 import { GET_POSTS_FAIL,GET_POSTS_REQUEST,GET_POSTS_SUCCESS } from "./types";
 interface stateType{
-    posts:Array<any>,
-    loading:boolean
+    posts:any[],
+    loading:boolean,
+    error:string
 }
 export const initialState:stateType={
     posts:[],
-    loading:false
+    loading:false,
+    error:""
 }
 
-export const postsReducer=(state:stateType=initialState,action:any)=>{
+export const postsReducer=(state:stateType=initialState,action:any):stateType=>{
     switch(action.type){
         case GET_POSTS_REQUEST:
             return {...state,loading:true}
             break;
             case GET_POSTS_SUCCESS:
-            return {...state,posts:action.payload.posts}
+               console.log(action.payload)
+            return {...state,posts:action.payload.posts,loading:false}
             break;
                case GET_POSTS_FAIL:
-                     return {...state,posts:action.payload.er}
+                     return {...state,error:action.payload.er}
                   break;
                   default:
         return state;

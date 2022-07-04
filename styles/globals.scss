@@ -1,0 +1,39 @@
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    background-color: #F2F3F7 !important;
+    height: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+.posts-title{
+  background: #fff;
+  padding: 10px;
+  h1{
+    text-align: center;
+  }
+}
+.posts{
+ margin-top: 2vh;
+font-family: Roboto;
+font-weight: 500;
+  .post{
+    background: #fff;
+     padding: 10px;
+     border-radius: 10px;
+     text-align: center;
+     height: 20vh;
+    margin-bottom: 4vh;
+  }
+}

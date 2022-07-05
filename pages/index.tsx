@@ -7,6 +7,7 @@ import { useEffect,useState } from 'react'
 import { useDispatch,useSelector } from 'react-redux'
 import { RootState,AppDispatch } from '../public/redux/store'
 import axios from 'axios'
+
 import { GetPostsFail,GetPostsRequest,GetPostsSuccess } from '../public/redux/posts/actions'
 const Home: NextPage = () => {
   
@@ -40,7 +41,7 @@ dispatch(getPosts());
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-     <div className="posts-title"><h1>Posts</h1></div>
+   
      
 <Posts/>
 </>

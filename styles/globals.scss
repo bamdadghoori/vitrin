@@ -18,25 +18,27 @@ a {
   box-sizing: border-box;
 }
 .posts-title{
-  background: #fff;
-  padding: 10px;
-  h1{
-    text-align: center;
-    a{
-      color: black;
-      text-decoration: none;
+  // background: #fff;
+  // padding: 10px;
+ 
+    span{
+      text-align: center;
     }
-  }
+    a{
+      color:#fff ;
+      text-decoration: none;
+      text-align: center;
+    }
+  
 }
 .posts{
  margin-top: 2vh;
-font-family: Roboto;
-font-weight: 500;
+
   .post{
     background: #fff;
      padding: 10px;
      border-radius: 10px;
-     text-align: center;
+    
      height: 20vh;
     margin-bottom: 4vh;
     cursor: pointer;

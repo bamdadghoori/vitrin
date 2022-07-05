@@ -5,7 +5,29 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import { store } from '../public/redux/store'
 import { Provider } from 'react-redux'
 import Layout from '../public/components/layout'
+
+import { createTheme } from '@mui/material'
+
+// declare module '@mui/material/styles' {
+ 
+//   interface Theme {
+//     buttons: {
+//       primary: {
+//         backgroung:string
+//       };
+//     };
+//   }
+//   interface Themeoptions {
+//    buttons?:{
+//      primary?:{
+//        background?:string;
+//   }
+//    }
+//   }
+//  }
 function MyApp({ Component, pageProps }: AppProps) {
+
+  
   return(
     <>
     <Provider store={store}>

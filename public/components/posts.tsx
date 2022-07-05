@@ -5,7 +5,7 @@ import NextNProgress from "nextjs-progressbar";
 import Loading from './loading';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
-
+import { Typography } from '@mui/material';
  const Posts = () => {
   const data=useSelector((state:RootState)=>state.posts)
   const loading=useSelector((state:RootState)=>state.loading)
@@ -39,7 +39,10 @@ import { useState } from 'react';
                 data.map((el)=>{
                   return <div key={el.id} className="col-md-3">
                     <div className="post" onClick={()=>handleClick(el)}>
-                    {el.title}
+                  <Typography textAlign="center" fontWeight="500">
+                  {el.title}
+                  </Typography>
+                    
                     </div>
                     
                   </div>

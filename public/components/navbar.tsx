@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from "next/link"
 import { AppBar,Toolbar,Typography,IconButton } from '@mui/material';
-import MenuIcon from "@mui/material/Menu/Menu";
+
 
  const Navbar = () => {
   return (

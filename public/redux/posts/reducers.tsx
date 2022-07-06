@@ -16,7 +16,7 @@ export const postsReducer=(state:stateType=initialState,action:any):stateType=>{
             return {...state,loading:true}
             break;
             case GET_POSTS_SUCCESS:
-               console.log(action.payload)
+             
             return {...state,posts:action.payload.posts,loading:false}
             break;
                case GET_POSTS_FAIL:

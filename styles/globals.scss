@@ -7,6 +7,8 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     background-color: #F2F3F7 !important;
     height: 100%;
+    overflow-x: hidden;
+    max-width: 100%;
 }
 
 a {
@@ -18,8 +20,7 @@ a {
   box-sizing: border-box;
 }
 .posts-title{
-  // background: #fff;
-  // padding: 10px;
+ 
  
     span{
       text-align: center;
@@ -33,7 +34,7 @@ a {
 }
 .posts{
  margin-top: 2vh;
-
+ overflow-x: hidden;
   .post{
     background: #fff;
      padding: 10px;
@@ -49,17 +50,12 @@ a {
     margin-top: 10vh;
     border-radius: 10px;
     padding: 30px;
-    .post-title{
-      text-align: center;
-    font-size: 3vh;
-    font-weight: 700;
-    }
-    .post-body{
-      margin-top:5vh;
-    }
+  
+  
 }
 
 .css-1qsstus-MuiButtonGroup-root {
+  overflow-x: hidden;
   .MuiButtonGroup-grouped{
     border-color: #FF4F00 !important;
     &:hover{
@@ -70,4 +66,18 @@ a {
     }
   }
 
+}
+@media(max-width:600px){
+  .css-1qsstus-MuiButtonGroup-root {
+    position: absolute;
+    top: 100vh;
+    .number-button{
+   display: none;
+  
+  }
+  
+}
+body{
+  overflow-y: hidden;
+}
 }

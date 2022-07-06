@@ -13,10 +13,13 @@ import Buttons from './pagination/buttons'
 
 
   const data=useSelector((state:RootState)=>state.posts)
+  //loading when the page is starting
   const loading=useSelector((state:RootState)=>state.loading)
+  //loading when the end user click the links (dynamic route)
   const [linkLoading,setLinkLoading]=useState(false)
   const router=useRouter();
-  //pagination
+ 
+  //pagination variables
   const itemsPerPage=12;
 const pageNumber=Math.floor(data.length/itemsPerPage)+1 
 const [currentPage,setCurrentPage]=useState(1)
@@ -24,13 +27,19 @@ const endOfCurrentItems=(currentPage*itemsPerPage)
 const startOfCurrentItems=endOfCurrentItems-itemsPerPage;
     const currentItems=data.slice(startOfCurrentItems,endOfCurrentItems)
     
+
+
   const handleClick=(data:any)=>{
       setLinkLoading(true)
       router.push(`/post/${data.id}`)
   }
+
+
   const changePage=(page:number)=>{
         setCurrentPage(page)
   }
+
+
   const prevPage=(page:number)=>{
     if(page==1){
       setCurrentPage(pageNumber)
@@ -39,6 +48,8 @@ const startOfCurrentItems=endOfCurrentItems-itemsPerPage;
       setCurrentPage(page-1)
     }
   }
+
+  
   const nextPage=(page:number)=>{
     if(page==pageNumber){
       setCurrentPage(1)
@@ -57,7 +68,7 @@ const startOfCurrentItems=endOfCurrentItems-itemsPerPage;
  <Loading/>
   ):(
     linkLoading ==true ? ( <NextNProgress
-    color="#29D"
+    color="#f2f3f7"
     startPosition={0.3}
     stopDelayMs={200}
     height={3}

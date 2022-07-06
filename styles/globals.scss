@@ -58,3 +58,16 @@ a {
       margin-top:5vh;
     }
 }
+
+.css-1qsstus-MuiButtonGroup-root {
+  .MuiButtonGroup-grouped{
+    border-color: #FF4F00 !important;
+    &:hover{
+      background-color: #e35300;
+    }
+    &.active{
+      background-color: #e35300;
+    }
+  }
+
+}
